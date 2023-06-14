@@ -1,5 +1,5 @@
 # ContratePro
-TCC Realizado por Felipe dos Santos Canizela e Leticia Amaral Lopes
+TCC Realizado por Felipe dos Santos Canizela - Github: "https://github.com/Canizelacanizela" e Leticia Amaral Lopes - Github: "https://github.com/Leticia567ds"
 ## Instalar as dependências
 <ul>
   <b>npm install</b>
