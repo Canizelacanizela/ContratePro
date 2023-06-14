@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../assets/cc.png">
+    <title>Tela de Profissionais</title>
+    <header>
+        <div class="logo">
+            <img id="i" src="../assets/c2.png" alt="" width="94px" height="94px">
+            <ul class="ni">
+                <li><label class="nn" for="search">Pesquisar:</label> <input class="n" type="search" id="search"
+                        name="search" placeholder="Pesquisar"> <button class="nnn" 
+                        type="submit">Buscar</button></li>
+            </ul>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../Proposta/index.html"><img src="../assets/bater-papo.png" alt="Bate-Papo"></a></li>
+                <li><a href="../PerfilPro/index.html"><img id="perfil" src="../assets/perfil.png" alt="Foto"></a></li>
+                <li><img id="sair" onclick="sair()" src="../assets/logout_sair.png" alt="LogOut"></li>
+            </ul>
+        </nav>
+    </header>
+</head>
+
+<body onload="carregar()">
+    <div class="main">
+        <div class="lista">
+            <select id="filtro-cidade" onchange="aplicarFiltro(this.value)">
+                <option value="Todas">Todas as cidades</option>
+                <option value="São Paulo">São Paulo</option>
+                <option value="Jaguariúna">Jaguariúna</option>
+                <option value="Campinas">Campinas</option>
+                <option value="Holambra">Holambra</option>
+                <option value="Artur Nogueira">Artur Nogueira</option>
+                <!-- Adicione mais opções de cidades, se necessário -->
+            </select>
+            <div class="profileTwo">
+                <div class="profile-body-section model">
+                    <div class="profile-header">
+                        <img id="imagem" src="https://via.placeholder.com/150" alt="Foto de Perfil">
+                        <a href="../teste_perfilCli/pagina_destino.html"></a>
+                        <div>
+                            <p id="id" hidden></p>
+                            <h2 id="nome"></h2>
+
+                            <div class="redirect">
+                                <button onclick="redirecionar()">Ver perfil</button>
+                            </div>
+                            <h4 id="cidade"></h4>
+                            <h4 id="telefone">Contato: </h4>
+                            <p id="des"></p>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------cadastro de proposta------------------------------- -->
+    <div id="modal1" class="modal">
+        <div id="novo">
+            <div class="modalHeader">
+                <h3> Enviar Proposta</h3>
+                <button class="fechar" onclick="modal1.setAttribute('style','display:none')">X</button>
+            </div>
+            <div class="modalForm">
+                <input type="hidden" id="idc" />
+                <label class="lab1" for="">Nome Completo:</label>
+                <input type="text" id="nomec" />
+                <label class="lab2" for="">Proposta:</label>
+                <textarea name="" id="propostac" cols="20" rows="3"></textarea>
+            </div>
+            <div class="modalFooter">
+                <button class="enviar-proposta" data-profissional-id="123">Enviar</button>
+            </div>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div id="alerta">
+            <div class="modalHeader">
+                <h3>Mensagem</h3>
+                <button onclick="modal2.setAttribute('style','display:none')">X</button>
+            </div>
+            <div id="msg"></div>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>

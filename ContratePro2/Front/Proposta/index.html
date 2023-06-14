@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../assets/cc.png">
+    <title>Tela de Propostas</title>
+    <header>
+        <div class="logo">
+            <img id="i" src="../assets/c2.png" alt="" width="94px" height="94px">
+            <ul class="ni">
+                
+            </ul>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../PerfilPro/index.html"><img id="perfil" src="../assets/perfil.png" alt="Foto"></a></li>
+                <li><img id="sair" onclick="sair()" src="../assets/logout_sair.png" alt="LogOut"></li>
+            </ul>
+        </nav>
+    </header>
+</head>
+
+<body onload="carregar()">
+    <div class="main">
+        <div class="lista">
+            <div class="profileTwo">
+                <div class="profile-body-section model">
+                    <div class="profile-header">
+                        <img id="imagem" src="https://via.placeholder.com/150" alt="Foto de Perfil">
+                        <div>
+                            <p id="id" hidden></p>
+                            <h2 id="nome"></h2>
+                            <h4 id="cidade"></h4>
+                            <div class="redirect">
+                                <button onclick="redirecionar()">Ver perfil</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p id="proposta"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>

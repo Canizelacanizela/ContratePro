@@ -1,0 +1,90 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mysql"
+    url      = env("DATABASE_URL")
+}
+
+model UserCliente {
+    id         Int                  @id @default(autoincrement())
+    imagem     String
+    nome       String
+    email      String
+    descricao  String?
+    senha      String
+    telefone   String
+    cidade     String
+    id_cli     avaliaProfissional[]
+    id_cliente Propostas[]
+    mensage           mensagens[]
+    respostas           respostas[]
+}
+
+model mensagens {
+    id_mensagem    Int      @id @default(autoincrement())
+    id_cliente Int
+    id_profissional Int
+    conteudo       String
+    data           DateTime @default(now())
+    cliente          UserCliente @relation(fields: [id_cliente], references: [id])
+    profissional     UserProfissionais       @relation(fields: [id_profissional], references: [id])
+  
+}
+
+model respostas {
+    id_mensagem    Int      @id @default(autoincrement())
+    id_profiss Int
+    id_clien Int
+    conteudo       String
+    data           DateTime @default(now())
+    cliente          UserCliente @relation(fields: [id_clien], references: [id])
+    profissional     UserProfissionais       @relation(fields: [id_profiss], references: [id])
+  
+}
+
+model UserProfissionais {
+    id           Int                  @id @default(autoincrement())
+    imagem       String
+    nome         String
+    email        String
+    senha        String
+    cidade       String
+    biografia    String
+    porhora      String
+    telefone     String
+    id_categoria Int
+    categoria    categoriaProfissoes  @relation(fields: [id_categoria], references: [id])
+    Comentario   avaliaProfissional[]
+    profissi     Propostas[]
+    mensage           mensagens[]
+    respostas           respostas[]
+}
+
+model categoriaProfissoes {
+    id             Int                 @id @default(autoincrement())
+    nome_categoria String
+    user           UserProfissionais[]
+}
+
+model avaliaProfissional {
+    id              Int               @id @default(autoincrement())
+    id_cliente      Int
+    comentario      String
+    id_profissional Int
+    id_cli          UserCliente       @relation(fields: [id_cliente], references: [id])
+    id_prof         UserProfissionais @relation(fields: [id_profissional], references: [id])
+}
+
+model Propostas {
+    id              Int               @id @default(autoincrement())
+    proposta        String
+    id_cliente      Int
+    id_profissional Int
+    id_pr           UserProfissionais @relation(fields: [id_profissional], references: [id])
+    id_cli          UserCliente       @relation(fields: [id_cliente], references: [id])
+}

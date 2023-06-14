@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../assets/cc.png">
+    <title>Tela de Login</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="esq">
+            <img src="../assets/good-team-animate.svg" alt="cli">
+        </div>
+        <div class="dir">
+            <div class="card">
+                <h1 class="h1">Faça o seu Login</h1>
+                <div class="in">
+                    <label for="E-mail">E-mail</label>
+                    <input id="email" placeholder="E-mail" type="text">
+                </div>
+                <div class="in">
+                    <label for="Senha">Senha</label>
+                    <input id="senha" placeholder="Senha" type="password">
+                    <img src="../assets/olho.png" alt="eyes" class="olhar" onclick="olharSenha()">
+                </div>
+                <button class="btn" onclick="login()">Login</button>
+            </div>
+
+            <a href="../CadastroCliente/index.html">
+                <p class="p">Cadastre-se</p>
+                <a href="../HomeTeste/index.html">Home</a>
+            </a>
+        </div>
+           
+    </div>
+
+</body>
+<script src="index.js"></script>
+
+</html>

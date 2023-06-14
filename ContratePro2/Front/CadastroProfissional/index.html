@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../assets/cc.png">
+    <title>Cadastro de Profissional</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="esq">
+            <img src="../assets/good-team-animate.svg" alt="cliente">
+        </div>
+        <div class="dir">
+          
+	    <div class="meio">
+		<table>
+			<tr>
+				<td class="td1" style="border-right: 2px solid rgba(230, 118, 118, 0.603)">
+                    <label for="Nome">Nome</label>
+                    <input id="nome" placeholder="Nome" type="text">
+					<label for="E-mail">E-mail</label>
+                    <input id="email"  placeholder="E-mail" type="text">
+                    <label for="Senha">Senha</label>
+                    <input id="senha"  placeholder="Senha" type="password">
+					<label for="Biografia">Biografia</label>
+                    <input id="biografia" placeholder="Biografia" type="text">
+                    <label for="Perfil">Imagem do Perfil</label>
+                    <input id="imagem" placeholder="Imagem" type="text">
+					
+				</td>
+				<td class="td2">
+                    <label for="Cidade">Cidade:</label>
+                    <input id="cidade" placeholder="Cidade" type="text">
+					<label for="Porhora">Por Hora:</label>
+                    <input id="porhora" placeholder="Preço Por Hora" type="text">
+					<label for="Telefone">Telefone</label>
+                    <input id="telefone" placeholder="Telefone" type="text">
+                    <label for="categoria">Tipo:</label>
+                    <select class="slc" name="categoria" id="id_categoria">
+                        <option value="1">Engenheiro</option>
+                        <option value="2">Medico</option>
+                        <option value="3">Pintor</option>
+                        <option value="4">Palhaço</option>
+                        <option value="5">Carpinteiro</option>
+                        <option value="6">Fotografo</option>
+                        <option value="7">Paisagista</option>
+                        <option value="8">Advogado</option>
+                        <option value="9">Professor de Reforço</option>
+                        <option value="10">Pedreiro</option>
+                    </select>
+                    <div class="btn">
+                        <button onclick="cadastrarUsuario()" >Cadastrar</button>
+                    </div>
+                    <div class="text">
+                        <a href="../LoginProf/index.html">
+                            <p class="p">Já tem uma conta? Faça Login</p>
+                        </a>
+                    </div>
+				</td>
+			</tr>
+		</table>
+	</div>
+        
+        
+</body>
+<script src="index.js"></script>
+
+</html>

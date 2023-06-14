@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../assets/cc.png">
+    <title>Tela de perfil</title>
+    <header>
+        <div class="logo">
+            <a href="../HomeTeste/index.html"><img class="imgage" src="../assets/c2.png" alt="c2"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../HomeCliente/index.html"><img src="../assets/silhueta-de-icone-de-casa.png" alt="Home"></a></li>
+                <li><a href="#"><img src="../assets/bater-papo.png" alt="Bate-Papo"></a></li>
+                <li><img id="sair" onclick="sair()" src="../assets/logout_sair.png" alt="LogOut"></li>
+            </ul>
+        </nav>
+    </header>
+</head>
+
+<body onload="listInfo()">
+    <div class="profile">
+        <div class="all ">
+            <div class="profile-header">
+                <img id="imagem" src="https://via.placeholder.com/150" alt="Foto de Perfil">
+                <div>
+                    <p id="id" hidden>id:</p>
+                    <h1 id="nome"></h1>
+                </div>
+                <div>
+                    <img id="myBtn" onclick="openModal()" class="lapis" src="../assets/relatorio.png" alt="lapis">
+                </div>
+            </div>
+            <div class="profile-body">
+                <div class="profile-body-section">
+                    <h2>Contato</h2>
+                    <p class="info" id="tel">Telefone:</p>
+                    <p id="email">Email:</p>
+                    
+                </div>
+                <div class="profile-body-section">
+                    <h2>Cidade</h2>
+                    <p id="city">Cidade:</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- -----------------------------------------alterar----------------------------------------- -->
+        <div id="myModalEdit" class="modalmm">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-content-body">
+                    <input type="text" class="input" id="m_id" placeholder="id" readonly>
+                    <input type="text" class="input" id="m_nome" placeholder="nome">
+                    <input type="text" class="input" id="m_email" placeholder="email">
+                    <input type="text" class="input" id="m_imagem" placeholder="Imagem">
+                    <input type="text" class="input" id="m_cidade" placeholder="cidade">
+                    <input type="text" class="input" id="m_telefone" placeholder="telefone">
+
+                </div>
+                <div class="modal-content-footer">
+                    <button  id="alterar" class="btn confirm">Alterar
+                        <button id="close" onclick="fechar()" class="btn cancel">Cancelar</button>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="index.js"></script>
+
+</html>

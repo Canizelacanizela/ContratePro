@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../PerfilPro/style.css">
+    <link rel="icon" href="../assets/cc.png">
+    <link rel="stylesheet" href="css.css">
+    <title>Perfil</title>
+    <header>
+        <div class="logo">
+            <a href="../HomeTeste/index.html"><img class="imgage" src="../assets/c2.png" alt="c2"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../HomeCliente/index.html"><img src="../assets/silhueta-de-icone-de-casa.png" alt="Home"></a></li>
+                <li><a href="#"><img src="../assets/bater-papo.png" alt="Bate-Papo"></a></li>
+                <li><img id="sair" onclick="sair()" src="../assets/logout_sair.png" alt="LogOut"></li>
+            </ul>
+        </nav>
+    </header>
+</head>
+<body>
+    <div class="profile">
+        <div class="all ">
+            <div class="profile-header">
+                <img id="imagem" src="https://via.placeholder.com/150" alt="Foto de Perfil">
+                <div>
+                    <p id="id" hidden>id:</p>
+                    <h1 id="nome"></h1>
+                </div>
+                <div class="hr">
+                    <p id="porhora">Por hora R$:
+                    <p id="hora">R$</p>
+                </div>
+            </div>
+            <button id="button" class="btn">Envie uma mensagem</button>
+            <div class="profile-body">
+                <div class="profile-body-section">
+                    <h2>Contato</h2>
+                    <p class="info" id="tel">Telefone:</p>
+                    <p id="email">Email:</p>
+                    <p id="city">Cidade:</p>
+                </div>
+                <div class="profile-body-section">
+                    <h2>Biografia</h2>
+                    <p id="biografia"></p>
+                </div>
+                <div class="profile-body-section">
+                    <h2>Categoria</h2>
+                    <p id="cat"></p>
+                </div>
+            </div>
+            <div class="footer">
+                <h3>Comentários:</h3>
+                <p id="nomec"></p>
+                <p id="coment"></p>
+                </main>
+            </div>
+        </div>
+    <script src="pagina_destino.js"></script>
+</body>
+
+</html>
